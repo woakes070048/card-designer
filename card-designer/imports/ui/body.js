@@ -1,17 +1,20 @@
 import { Template } from 'meteor/templating';
 import { Tasks } from '../api/tasks.js';
-//import '../api/interact.js';
-//import '../api/dragger.js';
+import { initVal, dragerObject } from '../api/dragableObjects.js';
 import './body.html';
  
 Template.body.helpers({
   tasks() {
     return Tasks.find({});
   },
+  initVal(){
+	return initVal;
+  }
 });
 
 Meteor.startup(function(){
 	 $.getScript('//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js', function(){
+		 dragerObject.createDragObject('container', 'check', 'dragable_rect');
 		  // target elements with the "draggable" class
 			interact('.draggable')
 			  .draggable({

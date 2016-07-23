@@ -1,15 +1,13 @@
 <body>
   <div class="container">
-	<div id="drag-1" class="draggable">
-		<p> with each pointer </p>
-	</div>
-	<div id="drag-2" class="draggable">
-		<p> with each pointer </p>
-	</div>
-  
     <header>
       <h1>Todo List</h1>
     </header>
+	<ul>
+	{{#each initVal.rects}}
+		{{>dragable_rect}}
+	{{/each}}
+	</ul>
  
     <ul>
       {{#each tasks}}
@@ -21,4 +19,10 @@
  
 <template name="task">
   <li>{{text}}</li>
+</template>
+
+<template name="dragable_rect">
+	<div id="drag-2" class="draggable">
+		<p> with each pointer </p>
+	</div>
 </template>
