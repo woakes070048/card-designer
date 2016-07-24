@@ -10,4 +10,4 @@ export const dragerObject = {
 	
 	
 }
-export const initVal = {'rects':[3, 6], 'circles':2};
+export const initVal = {'rects':[3, 6], 'circles':[1]};

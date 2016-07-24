@@ -3,11 +3,13 @@
     <header>
       <h1>Todo List</h1>
     </header>
-	<ul>
 	{{#each initVal.rects}}
 		{{>dragable_rect}}
 	{{/each}}
-	</ul>
+
+	{{#each initVal.circles}}
+		{{>draggable_circle}}
+	{{/each}}
  
     <ul>
       {{#each tasks}}
@@ -25,4 +27,9 @@
 	<div id="drag-2" class="draggable">
 		<p> with each pointer </p>
 	</div>
+</template>
+<template name="draggable_circle">
+	<svg height="100" width="100"  class="draggable">
+	  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+	</svg>
 </template>

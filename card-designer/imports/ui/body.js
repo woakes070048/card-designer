@@ -13,6 +13,7 @@ Template.body.helpers({
 });
 
 Meteor.startup(function(){
+	// Load Interactjs
 	 $.getScript('//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js', function(){
 		 dragerObject.createDragObject('container', 'check', 'dragable_rect');
 		  // target elements with the "draggable" class
