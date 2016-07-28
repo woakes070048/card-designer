@@ -7,7 +7,5 @@ export const dragerObject = {
 	addProperties: function(objectId, Property){
 		
 	}
-	
-	
 }
 export const initVal = {'rects':[3, 6], 'circles':[1]};

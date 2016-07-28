@@ -4,12 +4,12 @@ import { initVal, dragerObject } from '../api/dragableObjects.js';
 import './body.html';
  
 Template.body.helpers({
-  tasks() {
-    return Tasks.find({});
-  },
-  initVal(){
-	return initVal;
-  }
+	  tasks() {
+		return Tasks.find({});
+	  },
+	  initVal(){
+		return initVal;
+	  }
 });
 
 Meteor.startup(function(){
